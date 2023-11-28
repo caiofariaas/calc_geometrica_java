@@ -1,0 +1,3 @@
+As figuras planas tem os métodos calcularPerimetro e calcularArea
+Nas figuras planas você deverá calcular área e perímetro.
+
