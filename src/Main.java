@@ -8,12 +8,25 @@ public class Main {
         String nome = JOptionPane.showInputDialog("Bem-Vindo(a) a Calculadora Geometrica!!\nQual o seu nome?");
 
         while (true) {
-            int opt = Integer.parseInt(JOptionPane.showInputDialog(nome + ", Você deseja calcular figuras planas ou espaciais?\n" +
-                    "1 <- Planas\n2 <- Espaciais\n0 <- Fechar"));
+            int opt;
+
+            while (true){
+                try {
+                    opt = Integer.parseInt(JOptionPane.showInputDialog(nome + ", Você deseja calcular figuras planas ou espaciais?\n" +
+                            "1 <- Planas\n2 <- Espaciais\n0 <- Fechar"));
+                    break;
+                }
+                catch (NumberFormatException e){
+                    JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                }
+            }
 
             if (opt == 1) {
+                int fig;
 
-                int fig = Integer.parseInt(JOptionPane.showInputDialog("""
+                while (true){
+                    try {
+                        fig = Integer.parseInt(JOptionPane.showInputDialog("""
                         Escolha uma figura!
                         1 <- Circulo
                         2 <- Hexagono Regular
@@ -21,6 +34,12 @@ public class Main {
                         4 <- Retangulo
                         5 <- Triangulo
                         0 <- Fechar"""));
+                        break;
+                    }
+                    catch (NumberFormatException e){
+                        JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                    }
+                }
 
                 switch (fig) {
                     case 1 -> {
@@ -76,8 +95,8 @@ public class Main {
                     }
 
                     case 4 -> {
-                        double altura;
-                        double base;
+                        double altura, base;
+
                         JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Retangulo!");
 
                         while (true){
@@ -130,22 +149,28 @@ public class Main {
                     default -> JOptionPane.showMessageDialog(null, "Esta Opção não existe!");
                 }
             } else if (opt == 2) {
+                int fig;
 
-                int fig = Integer.parseInt(JOptionPane.showInputDialog("""
+                while (true){
+                    try {
+                        fig = Integer.parseInt(JOptionPane.showInputDialog("""
                         Escolha uma figura!
-                        1 <- Cilindro
-                        2 <- Cone
-                        3 <- Cubo
-                        4 <- Esfera
-                        5 <- Paralelepípedo
-                        6 <- Piramide
+                        1 <- Circulo
+                        2 <- Hexagono Regular
+                        3 <- Quadrado
+                        4 <- Retangulo
+                        5 <- Triangulo
                         0 <- Fechar"""));
+                        break;
+                    }
+                    catch (NumberFormatException e){
+                        JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                    }
+                }
 
                 switch (fig) {
                     case 1 -> {
-                        double altura;
-                        double raio;
-
+                        double altura, raio;
                         JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Cilindro!");
 
                         while (true){
@@ -169,51 +194,148 @@ public class Main {
                         Cilindro cilindro = new Cilindro(raio, altura);
                         JOptionPane.showMessageDialog(null, "Resumo\n" + cilindro.resumo(7));
                     }
-                    case 2 -> {
-                        JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Cone!");
-                        double altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
-                        double raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o Raio: "));
-                        Cone cone = new Cone(raio, altura);
 
+                    case 2 -> {
+                        double altura, raio;
+                        JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Cone!");
+
+                        while (true){
+                            try {
+                                altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+                        while (true){
+                            try {
+                                raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o Raio: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+
+                        Cone cone = new Cone(raio, altura);
                         JOptionPane.showMessageDialog(null, "Resumo\n" + cone.resumo(6));
                     }
-                    case 3 -> {
-                        JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Cubo!");
-                        double lado = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do lado: "));
-                        Cubo cubo = new Cubo(lado);
 
+                    case 3 -> {
+                        double lado;
+                        JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Cubo!");
+
+                        while (true){
+                            try {
+                                lado = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do lado: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+
+                        Cubo cubo = new Cubo(lado);
                         JOptionPane.showMessageDialog(null, "Resumo\n" + cubo.resumo(1));
                     }
-                    case 4 -> {
-                        JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Esfera!");
-                        double raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o Raio: "));
-                        Esfera esfera = new Esfera(raio);
 
+                    case 4 -> {
+                        double raio;
+                        JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Esfera!");
+
+                        while (true){
+                            try {
+                                raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o Raio: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+
+                        Esfera esfera = new Esfera(raio);
                         JOptionPane.showMessageDialog(null, "Resumo\n" + esfera.resumo(2));
                     }
+
                     case 5 -> {
+                        double altura, largura, comprimento;
                         JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Paralelepipedo!");
-                        double altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
-                        double largura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da largura: "));
-                        double comprimento = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do comprimento: "));
+                        
+                        while (true){
+                            try {
+                                altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+
+                        while (true){
+                            try {
+                                largura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da largura: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+                        while (true){
+                            try {
+                                comprimento = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do comprimento: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+
                         Paralelepipedo paralelepipedo = new Paralelepipedo(comprimento, altura, largura);
-
                         JOptionPane.showMessageDialog(null, "Resumo\n" + paralelepipedo.resumo(3));
-
                     }
-                    case 6 -> {
-                        JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Piramide!");
-                        double arestaBase = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da Aresta da Base: "));
-                        double apotema = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da Aresta da Base: "));
-                        double altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
-                        Piramide piramide = new Piramide(arestaBase, apotema, altura);
 
+                    case 6 -> {
+                        double arestaBase, apotema, altura;
+                        JOptionPane.showMessageDialog(null, nome + ", Você selecionou o Piramide!");
+
+                        while (true){
+                            try {
+                                arestaBase = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da Aresta da Base: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+                        while (true){
+                            try {
+                                apotema = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da Aresta da Base: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+                        while (true){
+                            try {
+                                altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
+                                break;
+                            }
+                            catch (NumberFormatException e){
+                                JOptionPane.showMessageDialog(null, "ERRO: Digite um valor numérico!");
+                            }
+                        }
+
+                        Piramide piramide = new Piramide(arestaBase, apotema, altura);
                         JOptionPane.showMessageDialog(null, "Resumo\n" + piramide.resumo(4));
                     }
+
                     case 0 -> {
                         JOptionPane.showMessageDialog(null, "Até a próxima!");
                         return;
                     }
+
                     default -> JOptionPane.showMessageDialog(null, "Esta Opção não existe!");
                 }
             }
