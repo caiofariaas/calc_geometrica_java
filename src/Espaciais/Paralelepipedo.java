@@ -19,12 +19,12 @@ public class Paralelepipedo {
         return 2 * ((this.comprimento * this.altura) + (this.altura * this.largura) * (this.comprimento * this.largura));
     }
 
-    public String toString(int num) {
+    public String resumo(int num) {
         if(num % 2 == 0){
-            return String.format("Comprimento: %.2f\nAltura: %.2f\nlargura: %.2f", this.comprimento, this.altura, this.largura).toUpperCase();
+            return String.format("Comprimento: %.2f\nAltura: %.2f\nlargura: %.2f\nVolume: %.2f\nArea: %.2f",
+                    this.comprimento, this.altura, this.largura, this.calcularVolume(), this.calcularAreaSuperficial()).toUpperCase();
         }
-        else {
-            return String.format("Comprimento: %.2f\nAltura: %.2f\nlargura: %.2f", this.comprimento, this.altura, this.largura).toLowerCase();
-        }
+        return String.format("Comprimento: %.2f\nAltura: %.2f\nlargura: %.2f\nVolume: %.2f\nArea: %.2f",
+                this.comprimento, this.altura, this.largura, this.calcularVolume(), this.calcularAreaSuperficial()).toLowerCase();
     }
 }

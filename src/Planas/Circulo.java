@@ -14,11 +14,9 @@ public class Circulo {
         return this.raio * this.raio;
     }
 
-    public String toString(int num) {
+    public String resumo(int num) {
         if(num % 2 == 0){
             return String.format("raio: %.2f",this.raio).toUpperCase();
         }
-        else {
-            return String.format("raio: %.2f",this.raio).toLowerCase();        }
-    }
+        return String.format("raio: %.2f",this.raio).toLowerCase();        }
 }

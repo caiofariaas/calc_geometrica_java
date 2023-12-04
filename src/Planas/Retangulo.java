@@ -17,12 +17,11 @@ public class Retangulo {
         return (2 * this.base) + (2 * this.altura);
     }
 
-    public String toString(int num) {
+    public String resumo(int num) {
         if(num % 2 == 0){
             return String.format("Altura: %.2f\nBase: %.2f", this.altura, this.base).toUpperCase();
         }
-        else {
-            return String.format("Altura: %.2f\nBase: %.2f", this.altura, this.base).toLowerCase();
-        }
+        return String.format("Altura: %.2f\nBase: %.2f", this.altura, this.base).toLowerCase();
+
     }
 }

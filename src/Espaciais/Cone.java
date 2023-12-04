@@ -17,12 +17,10 @@ public class Cone {
         return Math.PI * this.raio * Math.sqrt((Math.pow(this.altura, 2) + Math.pow(this.raio, 2)));
     }
 
-    public String toString(int num) {
+    public String resumo(int num) {
         if(num % 2 == 0){
-            return String.format("raio: %.2f",this.raio).toUpperCase();
+            return String.format("raio: %.2f\nVolume: %.2f\nArea: %.2f",this.raio, this.calcularVolume(), this.calcularAreaSuperficial()).toUpperCase();
         }
-        else {
-            return String.format("altura: %.2f",this.altura).toLowerCase();        }
+        return String.format("raio: %.2f\nVolume: %.2f\nArea: %.2f",this.raio, this.calcularVolume(), this.calcularAreaSuperficial()).toLowerCase();
     }
-
 }

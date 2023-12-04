@@ -14,12 +14,11 @@ public class Cubo {
         return Math.pow(this.lado, 2) * 6;
     }
 
-    public String toString(int num) {
+    public String resumo(int num) {
         if(num % 2 == 0){
-            return String.format("Lado: %.2f",this.lado).toUpperCase();
-        }
-        else {
-            return String.format("Lado: %.2f",this.lado).toLowerCase();        }
-    }
+            return String.format("lado: %.2f\nVolume: %.2f\nArea: %.2f",this.lado, this.calcularVolume(), this.calcularAreaSuperficial()).toUpperCase();
 
+        }
+        return String.format("lado: %.2f\nVolume: %.2f\nArea: %.2f",this.lado, this.calcularVolume(), this.calcularAreaSuperficial()).toLowerCase();
+    }
 }

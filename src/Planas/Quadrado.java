@@ -15,11 +15,10 @@ public class Quadrado {
         return this.lado * this.lado;
     }
 
-    public String toString(int num) {
+    public String resumo(int num) {
         if(num % 2 == 0){
             return String.format("Lado: %.2f",this.lado).toUpperCase();
         }
-        else {
-            return String.format("Lado: %.2f",this.lado).toLowerCase();        }
-    }
+        return String.format("Lado: %.2f",this.lado).toLowerCase();        }
+
 }
