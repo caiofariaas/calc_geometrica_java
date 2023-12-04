@@ -19,9 +19,8 @@ public class Retangulo {
 
     public String resumo(int num) {
         if(num % 2 == 0){
-            return String.format("Altura: %.2f\nBase: %.2f", this.altura, this.base).toUpperCase();
+            return String.format("Altura: %.2f\nBase: %.2f\nArea: %.2f\nPerimetro: %.2f", this.altura, this.base, this.calcularArea(), this.calcularPerimetro()).toUpperCase();
         }
-        return String.format("Altura: %.2f\nBase: %.2f", this.altura, this.base).toLowerCase();
-
+        return String.format("Altura: %.2f\nBase: %.2f\nArea: %.2f\nPerimetro: %.2f", this.altura, this.base, this.calcularArea(), this.calcularPerimetro()).toLowerCase();
     }
 }

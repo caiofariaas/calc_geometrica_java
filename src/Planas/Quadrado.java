@@ -17,8 +17,10 @@ public class Quadrado {
 
     public String resumo(int num) {
         if(num % 2 == 0){
-            return String.format("Lado: %.2f",this.lado).toUpperCase();
+            return String.format("Lado: %.2f\nVolume: %.2f\nArea: %.2f",this.lado, this.calcularPerimetro(), this.calcularArea()).toUpperCase();
+
         }
-        return String.format("Lado: %.2f",this.lado).toLowerCase();        }
+        return String.format("Lado: %.2f\nVolume: %.2f\nArea: %.2f",this.lado, this.calcularPerimetro(), this.calcularArea()).toLowerCase();
+    }
 
 }

@@ -16,7 +16,8 @@ public class Circulo {
 
     public String resumo(int num) {
         if(num % 2 == 0){
-            return String.format("raio: %.2f",this.raio).toUpperCase();
+            return String.format("raio: %.2f\nVolume: %.2f\nArea: %.2f",this.raio, this.calcularPerimetro(), this.calcularArea()).toUpperCase();
         }
-        return String.format("raio: %.2f",this.raio).toLowerCase();        }
+        return String.format("raio: %.2f\nVolume: %.2f\nArea: %.2f",this.raio, this.calcularPerimetro(), this.calcularArea()).toLowerCase();
+    }
 }
