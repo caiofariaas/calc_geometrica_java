@@ -49,6 +49,11 @@ public class Main {
                         while (true){
                             try {
                                 raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o Raio do Circulo: "));
+
+                                if(raio <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -66,6 +71,11 @@ public class Main {
                         while (true){
                             try {
                                 lado = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do lado: "));
+
+                                if(lado <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -84,6 +94,11 @@ public class Main {
                         while (true){
                             try {
                                 lado = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do lado: "));
+
+                                if(lado <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -102,6 +117,11 @@ public class Main {
                         while (true){
                             try {
                                 altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
+
+                                if(altura <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
 
                             }
@@ -113,6 +133,11 @@ public class Main {
                         while (true){
                             try {
                                 base = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da Base: "));
+
+                                if(base <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -131,6 +156,11 @@ public class Main {
                         while (true){
                             try {
                                 lado = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do lado: "));
+
+                                if(lado <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -155,11 +185,11 @@ public class Main {
                     try {
                         fig = Integer.parseInt(JOptionPane.showInputDialog("""
                         Escolha uma figura!
-                        1 <- Circulo
-                        2 <- Hexagono Regular
-                        3 <- Quadrado
-                        4 <- Retangulo
-                        5 <- Triangulo
+                        1 <- Cilindro
+                        2 <- Cone
+                        3 <- Cubo
+                        4 <- Esfera
+                        5 <- Paralelepipedo
                         0 <- Fechar"""));
                         break;
                     }
@@ -176,6 +206,11 @@ public class Main {
                         while (true){
                             try {
                                 altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
+
+                                if (altura <= 0){
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -185,6 +220,11 @@ public class Main {
                         while (true){
                             try {
                                 raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o Raio: "));
+
+                                if(raio <= 0){
+                                    JOptionPane.showMessageDialog(null,"Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -202,6 +242,11 @@ public class Main {
                         while (true){
                             try {
                                 altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
+
+                                if(altura <= 0){
+                                    JOptionPane.showMessageDialog(null,"Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -211,6 +256,11 @@ public class Main {
                         while (true){
                             try {
                                 raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o Raio: "));
+
+                                if(raio <= 0){
+                                    JOptionPane.showMessageDialog(null,"Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -229,6 +279,11 @@ public class Main {
                         while (true){
                             try {
                                 lado = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do lado: "));
+
+                                if(lado <= 0){
+                                    JOptionPane.showMessageDialog(null,"Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -247,6 +302,11 @@ public class Main {
                         while (true){
                             try {
                                 raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o Raio: "));
+
+                                if(raio <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -265,6 +325,11 @@ public class Main {
                         while (true){
                             try {
                                 altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
+
+                                if(altura <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -275,6 +340,11 @@ public class Main {
                         while (true){
                             try {
                                 largura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da largura: "));
+
+                                if(largura <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -284,6 +354,11 @@ public class Main {
                         while (true){
                             try {
                                 comprimento = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida do comprimento: "));
+
+                                if(comprimento <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -302,6 +377,11 @@ public class Main {
                         while (true){
                             try {
                                 arestaBase = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da Aresta da Base: "));
+
+                                if(arestaBase <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -311,6 +391,11 @@ public class Main {
                         while (true){
                             try {
                                 apotema = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da Aresta da Base: "));
+
+                                if(apotema <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
@@ -320,6 +405,11 @@ public class Main {
                         while (true){
                             try {
                                 altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a medida da altura: "));
+
+                                if(altura <= 0) {
+                                    JOptionPane.showMessageDialog(null, "Por Favor, digite um valor maior que 0!");
+                                    continue;
+                                }
                                 break;
                             }
                             catch (NumberFormatException e){
